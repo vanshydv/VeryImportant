@@ -1,96 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Actuarial Jokes</title>
-
-<style>
-body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #2c3e50, #4ca1af);
-    color: white;
-}
-
-.container {
-    text-align: center;
-    padding: 40px;
-    background: rgba(0,0,0,0.4);
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-    max-width: 450px;
-}
-
-h1 {
-    margin-bottom: 20px;
-}
-
-button {
-    padding: 12px 25px;
-    border: none;
-    border-radius: 25px;
-    background: #f1c40f;
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    transform: scale(1.1);
-}
-
-.joke {
-    margin-top: 20px;
-    font-size: 1.1rem;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-.joke.show {
-    opacity: 1;
-}
-</style>
+    <meta charset="UTF-8">
+    <title>Do Not Press</title>
 </head>
+<body style="text-align:center; margin-top:100px; font-family:Arial;">
 
-<body>
+    <button onclick="handleClick()" style="padding:15px 30px; font-size:18px;">
+        Do not press
+    </button>
 
-<div class="container">
-    <h1>📊 Actuarial Jokes</h1>
-    <button onclick="showJoke()">Reveal Joke</button>
-    <div class="joke" id="joke"></div>
-</div>
+    <p id="message" style="margin-top:20px; font-size:20px; color:red;"></p>
 
-<script>
-const jokes = [
-    "An actuary walks into a bar… and immediately calculates the probability of leaving safely.",
-    "Actuaries don’t predict the future — they just assign probabilities to it.",
-    "Why did the actuary bring a ladder? To reach higher confidence intervals.",
-    "There are two types of actuaries: those who can extrapolate from incomplete data.",
-    "An actuary’s favorite type of music? Risk and roll.",
-    "Why did the actuary cross the road? Based on the model, it had a 97.3% success rate.",
-    "Actuaries: turning uncertainty into spreadsheets since forever.",
-    "I asked an actuary for a joke… they said the expected value was too low.",
-    "Actuaries don’t take risks — they price them.",
-    "Why are actuaries calm? Because they’ve already modeled the worst-case scenario."
-];
+    <!-- Fart sound (you can replace with any sound URL) -->
+    <audio id="fartSound">
+        <source src="https://www.myinstants.com/media/sounds/fart.mp3" type="audio/mpeg">
+    </audio>
 
-function showJoke() {
-    const jokeDiv = document.getElementById("joke");
-    const random = jokes[Math.floor(Math.random() * jokes.length)];
-    
-    jokeDiv.classList.remove("show");
-    setTimeout(() => {
-        jokeDiv.textContent = random;
-        jokeDiv.classList.add("show");
-    }, 100);
-}
-</script>
+    <script>
+        function handleClick() {
+            document.getElementById("message").innerText = "You idiot can’t you read";
+            document.getElementById("fartSound").play();
+        }
+    </script>
 
 </body>
 </html>
